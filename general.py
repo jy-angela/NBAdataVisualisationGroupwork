@@ -4,7 +4,7 @@ from adjustText import adjust_text
 import numpy as np
 import os
 '''
-我希望计算出2020-2021年度最优秀的球员们
+
 I need to tell a story,
 Why I chose them, why they are the best
 
@@ -30,7 +30,7 @@ gameBasicData = pd.read_csv(os.path.join(data_path, pergame), encoding="UTF-8",s
 
 
 
-# 1. 过滤掉上场时间不足的人、再过滤掉高阶数据太低的人（不然展示效果不好看），可以看出，约基奇统治了高阶数据bpm和ws
+# 
 # data clear: if minutes playing is too small, we regard this player as an unimportant player in his team.
 advancedData_clear = advancedData.drop(advancedData[advancedData['MP']<advancedData['MP'].mean()].index)
 # advancedData_clear = advancedData.drop(advancedData[advancedData['MP']<150].index)
